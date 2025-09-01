@@ -8,6 +8,9 @@
             background-color: #27408c;
             line-height: 1.6;
         }
+        footer {
+            text-align: center;
+        }
         .container {
             width: 80%;
             margin: auto;
@@ -15,13 +18,13 @@
         }
         .main-info {
             background: #e7e7e7;
-            padding: 20px;
+            padding: 5px;
             text-align: center;
         }
         .main-info h1 {
             margin: 0;
         }
-        .hobbies, .lewis, .course, .job, .fact, .int{
+        .hobbies, .course, .job, .fact, .int{
             background: #e7e7e7;
             padding: 15px;
             margin-bottom: 10px;
@@ -38,19 +41,11 @@
             <p>Preferred Name: Nick</p>
         </header>
 
-        <section class="lewis">
-			<h2>Lewis year/major/concentrations:</h2> 
-            <p>Currently, I am a Junior pursuing a CS degree with a concentration in Video Game Developement</p>
-			<h2>Reasons for pursuing this degree:</h2> 
-            <p>I have always had a fascination with computers at a young age and for that, I want to create the games that I love.</p>
-        </section>
-
         <section class="int">
             <h2>Introduction:</h2>
-            <p>Hello! My name is Nicolas Delgado and I am 21 years old. I live with my dad whose name I will not provide.
-             I look up to my dad as he has provided me with invaluable lessons throughout my life, he has also helped in providing me with an education.
-            I am thankful to have a father like him in my life and wish to give my own son the same treatment. I strive to be a better person than I was the day before
-            and have also started to enjoy cooking!</p>
+            <p>Hello! My name is Nicolas Delgado and I am 21 years old. Currently, I am a Senior pursuing a Computer Science degree with a concentration in Video Game Developement.
+                I chose to pursure this degree as I have always loved playing video games even at a young age.
+            </p>
         </section>
 
 		<section class="course">
@@ -65,16 +60,26 @@
 
         <section class="hobbies">
             <h2>Hobbies and Special Interests</h2>
-            <p>I like working out, reading, and playing video games with my friends. My favorite niche of mine is discovering new songs to listen too.</p>
+            <p>I like fishing, working out, and playing video games with my friends. I also really like listening to tons of new music!</p>
             <p>Below is just one of my playlists that I am very fond of.</p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7gUO6gXTPTPeBq1QJuj5uw?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7gUO6gXTPTPeBq1QJuj5uw?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </section>
 
         <section class="fact">
             <h2>Fun Fact</h2>
             <p>There was a period of my life where I was obsessed with biking. I would bike all day and what not.</p>
-            <p><a href = "https://www.youtube.com/watch?v=V-yO1DcdUFQ">Here</a> is a link to a video that inspired me too really explore the area in which I live in.</p>
+            <p><a href = "https://www.youtube.com/watch?v=V-yO1DcdUFQ">Here</a> is a link to a video that inspired me to really explore the area in which I live in.</p>
         </section>
+
+        <footer>
+           <p> Last Updated: <span id="lastModified"></span></p>
+        </footer>
     </div>
+    <script>
+        const lastModifiedDate = new Date(document.lastModified)
+        const options = { year: 'numeric', month: 'long', day: 'numeric'}
+        const formattedDate = lastModifiedDate.toLocaleDateString('en-us', options)
+        document.getElementById('lastModified').textContent = formattedDate
+    </script>
 </body>
 </html>
